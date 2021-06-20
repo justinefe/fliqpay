@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Dashboard } from "./layouts/Dashboard";
+import { Amount } from "./views/Amount";
+import { Pay } from "./views/Pay";
+import { Recipient } from "./views/Recipient";
+import { Review } from "./views/Review";
+import "./styles/index.scss";
+import "./styles/tailwind_index.scss";
 
-function App() {
+const App: React.FunctionComponent = () => {
+  const handleCancel: React.MouseEventHandler<HTMLDivElement> = (event) => {
+    console.log(">>>>>....", event);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+         <Dashboard handleCancel={handleCancel}>
+          <Switch>
+            <Route exact path="/" component={Amount} />
+            <Route exact path="/pay" component={Pay} />
+            <Route exact path="/recipient" component={Recipient} />
+            <Route exact path="/review" component={Review} />
+          </Switch>
+        </Dashboard>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
+
