@@ -1,4 +1,4 @@
-# Justin Efeoghene Igugu Lassod Front-end Task
+# Justin Efeoghene Igugu Fliqpay Front-end Task
 
 #### Technologies
 
@@ -8,11 +8,11 @@
 
 ### Using the App
 
-# Visit or click the https://lassod-frontend.herokuapp.com/
+# Visit or click the https://fliqpay.netlify.app/
 
 # Clone the app
 
-git clone https://github.com/justinefe/lassod-frontend.git
+git clone https://github.com/justinefe/fliqpay.git
 
 # Switch to directory
 
